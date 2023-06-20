@@ -12,17 +12,17 @@ int print_sign(int n)
 	if (n > 0)
 	{
 		putchar('+');
-		return (1);
+		return 1;
 	}
 	else if (n < 0)
 	{
 		putchar('-');
-		return (-1);
+		return -1;
 	}
 	else
 	{
 		putchar('0');
-		return (0);
+		return 0;
 	}
 }
 
@@ -33,35 +33,35 @@ int main(void)
 	/* Test cases with expected correct outputs */
 	result = print_sign(98);
 	printf("Expected output: +\n");
-	printf("Actual output  : %c\n", result);
+	printf("Actual output  : %c\n", result > 0 ? '+' : result == 0 ? '0' : '-');
 
 	result = print_sign(0);
 	printf("Expected output: 0\n");
-	printf("Actual output  : %c\n", result);
+	printf("Actual output  : %c\n", result > 0 ? '+' : result == 0 ? '0' : '-');
 
 	result = print_sign(0xff);
 	printf("Expected output: +\n");
-	printf("Actual output  : %c\n", result);
+	printf("Actual output  : %c\n", result > 0 ? '+' : result == 0 ? '0' : '-');
 
 	result = print_sign(-1);
 	printf("Expected output: -\n");
-	printf("Actual output  : %c\n", result);
+	printf("Actual output  : %c\n", result > 0 ? '+' : result == 0 ? '0' : '-');
 
 	result = print_sign(99);
 	printf("Expected output: +\n");
-	printf("Actual output  : %c\n", result);
+	printf("Actual output  : %c\n", result > 0 ? '+' : result == 0 ? '0' : '-');
 
 	result = print_sign(INT_MAX);
 	printf("Expected output: +\n");
-	printf("Actual output  : %c\n", result);
+	printf("Actual output  : %c\n", result > 0 ? '+' : result == 0 ? '0' : '-');
 
 	result = print_sign(INT_MIN);
 	printf("Expected output: -\n");
-	printf("Actual output  : %c\n", result);
+	printf("Actual output  : %c\n", result > 0 ? '+' : result == 0 ? '0' : '-');
 
 	result = print_sign(-4);
 	printf("Expected output: -\n");
-	printf("Actual output  : %c\n", result);
+	printf("Actual output  : %c\n", result > 0 ? '+' : result == 0 ? '0' : '-');
 
 	return 0;
 }
